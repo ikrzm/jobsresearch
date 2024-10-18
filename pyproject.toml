@@ -31,7 +31,7 @@ setup = [
 
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["./"]
 
 [tool.setuptools.dynamic]
 version = {attr = "jobsresearch.__version__"}
