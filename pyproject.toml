@@ -28,11 +28,10 @@ setup = [
   "setuptools"
 ]
 
-[tool.setuptools]
-package-dir = {"" = "src"}
+
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["."]
 
 [tool.setuptools.dynamic]
 version = {attr = "jobsresearch.__version__"}
