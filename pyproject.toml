@@ -11,21 +11,28 @@ authors = [
 requires-python = ">=3.9"
 dynamic = ["version"]
 dependencies = [
-  "pandas>=1.3.0",     #
-  "numpy>=1.21.0"      
+  "requests>=2.26.0",
+  "pandas>=1.3.0",
+  "numpy>=1.21.0"
 ]
 
 [project.optional-dependencies]
 dev = [
-  "ruff",               # Linter for Python
-  "pytest>=7.0.0",      # For running tests
-  "black>=22.0.0",      # Code formatter
-  "mypy>=0.910"         # Static type checker
+  "ruff",
+  "pytest>=7.0.0",
+  "black>=22.0.0",
+  "mypy>=0.910"
 ]
 setup = [
   "wheel",
   "setuptools"
 ]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.setuptools.dynamic]
 version = {attr = "jobsresearch.__version__"}
