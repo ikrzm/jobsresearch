@@ -1,0 +1,13 @@
+name: Python project
+on:
+  pull_request:
+    branches:
+      - master
+
+job:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chout repo
+        uses: actions/checkout@v3
+  
