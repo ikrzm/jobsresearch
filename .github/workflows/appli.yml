@@ -2,9 +2,9 @@ name: Python project
 on:
   pull_request:
     branches:
-      - master
+      - "*"
 
-job:
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
